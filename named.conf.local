@@ -1,0 +1,10 @@
+zone "kexow.com" {
+        type master;
+        file "/etc/bind/zones/kexow.com.zone";
+        };
+
+zone "102.254.54.in-addr.arpa" {
+     type master;
+     file "/etc/bind/zones/rev.102.254.54.in-addr.arpa";
+
+};

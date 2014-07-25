@@ -1,0 +1,17 @@
+kexow.com. IN      SOA     ns1.kexow.com. admin.kexow.com. (
+          2006071801
+          10    
+          600      
+          10 
+          10)  
+kexow.com. IN      NS      ns1.kexow.com.
+kexow.com. IN      NS      ns2.kexow.com.
+kexow.com. IN      MX     10 mta.kexow.com.
+
+kexow.com. IN A 54.245.102.50
+www           IN      A       54.245.102.50
+mta             IN      A      54.245.102.50
+ns1              IN      A       54.245.102.50
+ns2              IN      A       54.245.102.50
+*	IN	A		54.245.102.50
+connect IN A 54.184.26.63

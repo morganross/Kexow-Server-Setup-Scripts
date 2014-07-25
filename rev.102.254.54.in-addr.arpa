@@ -1,0 +1,10 @@
+@ IN SOA ns1.kexow.com. admin.kexow.com. (
+                        2006071801; serial
+                        28800; refresh, seconds
+                        604800; retry, seconds
+                        604800; expire, seconds
+                        86400 ); minimum, seconds
+
+                     IN  NS ns1.kexow.com.
+
+50                  IN      PTR    kexow.com
