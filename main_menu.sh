@@ -28,6 +28,10 @@ while true;do
 	echo "7. Add aws-ec2 variables your login shell [$HOME/.bashrc]"
 	echo "8. Populate list.txt with all existing spot instance"
 	echo "9. Run the LDAP script"
+	echo "a. Run the Lamp script"
+	echo "b. Run the LDAP script"
+	echo "c. Run the LDAP script"
+	echo "d. Run the LDAP script"
 	echo "Press any other to Exit"
 	echo "*******************************************************************"
 	echo -n "Enter your choice :"
@@ -71,6 +75,11 @@ case "$choice" in
     run_ldap_func
     sleep 2
     ;;
+"a")
+    run_lamp_func
+    sleep 2
+    ;;
+
 
 *)
     echo "exit from menu"

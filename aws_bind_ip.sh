@@ -249,3 +249,38 @@ ou: Users" > /tmp/new.ldif
 sudo ldapadd -x -D "cn=admin,dc=us-west-2,dc=compute,dc=internal" -w mkrstaJ&&3KlkFddse3 -f /tmp/new.ldif
 
 }
+run_lamp_func () {
+
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+sudo passwd ubuntu
+sudo service ssh restart
+sudo apt-get update
+sudo apt-get -y install apache2
+sudo apt-get -y install mysql-server libapache2-mod-auth-mysql php5-mysql 
+sudo /usr/bin/mysql_secure_installation
+sudo apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
+sudo service apache2 restart
+sudo apt-get -y install phpmyadmin
+sudo sed -i '$ a\
+Include /etc/phpmyadmin/apache.conf' /etc/apache2/apache2.conf
+sudo service apache2 restart
+
+sudo chmod 400 /home/ubuntu/installer/clients.pem
+sudo chmod 755 /home/ubuntu/installer/server_script.sh
+sudo chmod 4777 /var/www/adscript.sh
+sudo chmod 4777 /var/www/xtra/changestaus.sh
+sudo chmod 777 /var/log/named/queries.log
+sudo chmod 777 /etc/bind/list.txt
+sudo chmod 400 /home/ubuntu/installer/clients.pem
+sudo chmod 777 -R /var/www/xtra/
+sudo chmod 755 /home/ubuntu/installer/server_script.sh
+sudo chmod 777 -R /var/www/pyro/
+
+
+sudo /etc/init.d/apache2 restart
+sudo chmod 777 /etc/ssh/ssh_config
+sudo echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+
+
+
+}
