@@ -79,7 +79,10 @@ case "$choice" in
     run_lamp_func
     sleep 2
     ;;
-
+"b")
+    bash -x ./server_script.sh
+    sleep 2
+    ;;
 
 *)
     echo "exit from menu"

@@ -275,12 +275,11 @@ sudo chmod 400 /home/ubuntu/installer/clients.pem
 sudo chmod 777 -R /var/www/xtra/
 sudo chmod 755 /home/ubuntu/installer/server_script.sh
 sudo chmod 777 -R /var/www/pyro/
-
-
-sudo /etc/init.d/apache2 restart
 sudo chmod 777 /etc/ssh/ssh_config
+sudo /etc/init.d/apache2 restart
 sudo echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
+append sudoers file
 
 
 }
