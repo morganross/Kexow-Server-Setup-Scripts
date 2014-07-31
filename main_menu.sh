@@ -89,7 +89,8 @@ case "$choice" in
     sleep 2
     ;;
 "c")
-    sudo mv /home/ubuntu/Kexow-Website/ /var/www/
+sudo mv /home/ubuntu/Kexow-website/ /var/www/
+#fix this to remove parent folder
 sudo chmod 777 -R /var/www/xtra/
 sudo chmod 777 -R /var/www/pyro/
 sudo chmod 4777 /var/www/adscript.sh
