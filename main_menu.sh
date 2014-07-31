@@ -36,7 +36,7 @@ while true;do
 	echo "a. Run the Lamp script"
 	echo "b. Run the server script"
 	echo "c. Move website files"
-	echo "d. Run the LDAP script"
+	echo "d. N/A"
 	echo "Press any other to Exit"
 	echo "*******************************************************************"
 	echo -n "Enter your choice :"
@@ -90,9 +90,16 @@ case "$choice" in
     ;;
 "c")
     sudo mv /home/ubuntu/Kexow-Website/ /var/www/
+sudo chmod 777 -R /var/www/xtra/
+sudo chmod 777 -R /var/www/pyro/
+sudo chmod 4777 /var/www/adscript.sh
+sudo chmod 4777 /var/www/xtra/changestaus.sh
     sleep 2
     ;;		
-
+"d")
+    echo your mom $text
+    sleep 2
+    ;;
 *)
     echo "exit from menu"
     break

@@ -246,7 +246,7 @@ objectclass: organizationalUnit
 objectclass: top
 ou: Users" > /tmp/new.ldif
 
-sudo ldapadd -x -D "cn=admin,dc=us-west-2,dc=compute,dc=internal" -w mkrstaJ&&3KlkFddse3 -f /tmp/new.ldif
+sudo ldapadd -x -D "cn=admin,dc=us-west-2,dc=compute,dc=internal" -w PASSWORD85 -f /tmp/new.ldif
 }
 
 run_lamp_func () {
@@ -265,12 +265,8 @@ Include /etc/phpmyadmin/apache.conf' /etc/apache2/apache2.conf
 sudo service apache2 restart
 sudo chmod 400 /home/ubuntu/Kexow-Server-Setup-Scripts/clients.pem
 sudo chmod 755 /home/ubuntu/Kexow-Server-Setup-Scripts/server_script.sh
-sudo chmod 4777 /var/www/adscript.sh
-sudo chmod 4777 /var/www/xtra/changestaus.sh
 sudo chmod 777 /var/log/named/queries.log
 sudo chmod 777 /etc/bind/list.txt
-sudo chmod 777 -R /var/www/xtra/
-sudo chmod 777 -R /var/www/pyro/
 sudo chmod 777 /etc/ssh/ssh_config
 sudo /etc/init.d/apache2 restart
 sudo echo "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
