@@ -16,7 +16,7 @@ if [ $do_exit -eq 1 ];then
 	exit
 fi
 
-source aws_bind_ip.sh
+source /home/ubuntu/Kexow-Server-Setup-Scripts/aws_bind_ip.sh
 while true;do
 	echo "*******************************************************************"
 	echo "1. Install ec2-api-tools"
