@@ -4,14 +4,14 @@ IP_LIST="/etc/bind/list.txt"
 LOG="/var/log/named/queries.log"
 #source aws_bind_ip.sh
 do_exit=0
-farray=(named.conf.log pk.pem cert.pem creds.txt aws_bind_ip.sh named.conf.local)
-for FILE in "${farray[@]}"
-do
-	if [ ! -e $FILE ] ;then
-		echo "The required files $FILE does not exist"
-		do_exit=1
-	fi
-done
+#farray=(named.conf.log pk.pem cert.pem creds.txt aws_bind_ip.sh named.conf.local)
+#for FILE in "${farray[@]}"
+#do
+#	if [ ! -e $FILE ] ;then
+#		echo "The required files $FILE does not exist"
+#		do_exit=1
+#	fi
+#done
 if [ $do_exit -eq 1 ];then
 	exit
 fi
