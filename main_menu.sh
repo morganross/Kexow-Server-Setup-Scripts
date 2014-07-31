@@ -2,7 +2,7 @@
 ZFILE="/etc/bind/zones/kexow.com.zone"
 IP_LIST="/etc/bind/list.txt"
 LOG="/var/log/named/queries.log"
-#source aws_bind_ip.sh
+source aws_bind_ip.sh
 do_exit=0
 #farray=(named.conf.log pk.pem cert.pem creds.txt aws_bind_ip.sh named.conf.local)
 #for FILE in "${farray[@]}"
