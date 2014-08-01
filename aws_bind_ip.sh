@@ -4,7 +4,7 @@ aws_install () {
 sudo perl -pi.orig -e   'next if /-backports/; s/^# (deb .* multiverse)$/$1/'   /etc/apt/sources.list
 sudo apt-add-repository ppa:awstools-dev/awstools
 sudo apt-get -y update
-sudo apt-get -y install ec2-api-tools
+sudo apt-get install -y ec2-api-tools
 if [ $? -ne 0 ];then
 	echo "Fail to install the ec2-api-tools"
 else

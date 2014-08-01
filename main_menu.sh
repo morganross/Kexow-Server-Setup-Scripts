@@ -1,8 +1,7 @@
 #!/bin/bash
 
-##This script can be found at and run with on Ubuntu 12.04 on AWS EC2.
-##sudo wget goo.gl/8ET70z -O kexow-install.sh
-##sudo sh kexow-install.sh
+##
+##sudo sh kexow_install.sh
 ##
 ZFILE="/etc/bind/zones/kexow.com.zone"
 IP_LIST="/etc/bind/list.txt"
@@ -37,6 +36,8 @@ while true;do
 	echo "b. Run the server script"
 	echo "c. Move website files"
 	echo "d. Git Pydio and install"
+	echo "e. Update server_script with new keyfile and ami"
+	echo "f. run client script"
 	echo "Press any other to Exit"
 	echo "*******************************************************************"
 	echo -n "Enter your choice :"
@@ -90,7 +91,6 @@ case "$choice" in
     ;;
 "c")
 sudo mv /home/ubuntu/Kexow-website/* /var/www/
-#fix this to remove parent folder
 sudo chmod 777 -R /var/www/xtra/
 sudo chmod 777 -R /var/www/pyro/
 sudo chmod 4777 /var/www/adscript.sh
@@ -102,6 +102,13 @@ sudo chmod 4777 /var/www/xtra/changestaus.sh
 	#git pydio and change it up
     sleep 2
     ;;
+"e")
+    #change ami and keyfile in server_script. 
+    sleep 2
+    ;;	
+"f")
+    #here is the client setup script 
+    sleep 2
 *)
     echo "exit from menu"
     break
