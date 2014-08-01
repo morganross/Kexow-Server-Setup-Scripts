@@ -265,6 +265,7 @@ Include /etc/phpmyadmin/apache.conf' /etc/apache2/apache2.conf
 sudo service apache2 restart
 sudo chmod 400 /home/ubuntu/Kexow-Server-Setup-Scripts/clients.pem
 sudo chmod 755 /home/ubuntu/Kexow-Server-Setup-Scripts/server_script.sh
+#move to bind install
 sudo chmod 777 /var/log/named/queries.log
 sudo chmod 777 /etc/bind/list.txt
 sudo chmod 777 /etc/ssh/ssh_config
