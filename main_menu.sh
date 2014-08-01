@@ -36,7 +36,7 @@ while true;do
 	echo "a. Run the Lamp script"
 	echo "b. Run the server script"
 	echo "c. Move website files"
-	echo "d. N/A"
+	echo "d. Git Pydio and install"
 	echo "Press any other to Exit"
 	echo "*******************************************************************"
 	echo -n "Enter your choice :"
@@ -99,6 +99,7 @@ sudo chmod 4777 /var/www/xtra/changestaus.sh
     ;;		
 "d")
     echo your mom $text
+	#git pydio and change it up
     sleep 2
     ;;
 *)
